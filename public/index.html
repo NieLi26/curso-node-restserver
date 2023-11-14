@@ -35,7 +35,11 @@
             //    google token
             // console.log('id token: ', response.credential);
 
-            fetch('http://localhost:8080/api/auth/google', {
+            let url = ( window.location.hostname.includes('localhost') ) 
+                    ? 'http://localhost:8080/api/auth/google'
+                    : 'https://curso-node-restserver-yclu.onrender.com/'
+
+            fetch(url, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
