@@ -31,7 +31,8 @@ const productoSchema = mongoose.Schema({
     disponible: {
         type: Boolean,
         default: true
-    }
+    },
+    img: { type: String }
 });
 
 productoSchema.methods.toJSON = function () {
